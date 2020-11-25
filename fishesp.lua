@@ -12,7 +12,7 @@ local function contains(item, val)
 	return false
 end
 
-client.set_event_callback("paint", function(ctx)
+client.set_event_callback("paint", function()
     for _, v in pairs(entity.get_all("CFish")) do
         local x,y,z = entity.get_prop(v, "m_vecOrigin")
         local wx, wy = renderer.world_to_screen(x, y, z)
